@@ -13,12 +13,17 @@ function BankApplication(customername,balance=0){
     this.balance=balance;
     this.accountNumber=Date.now()
 
-    this.deposit=function(amount){
-        this.balance+=amount;
-    }
-    this.withdraw=function(amount){
-        this.balance-=amount;
-    }
+  
+   
+}
+
+//prototype object
+
+BankApplication.prototype.deposit=function(amount){
+    this.balance+=amount
+}
+BankApplication.prototype.withdraw=function(amount){
+    this.balance-=amount;
 }
 
 
