@@ -8,23 +8,24 @@ const add=document.querySelector(".add-btn")
 // console.log(name,accountNumber,btn,submit,amount)
 
 console.log("file is attached");
-function BankApplication(customername,balance=0){
-    this.customername=customername;
-    this.balance=balance;
-    this.accountNumber=Date.now()
+class BankApplication{
+    constructor (customername,balance=0){
+        this.customername=customername;
+        this.balance=balance;
+        this.accountNumber=Date.now()  
+    }
 
-  
-   
+    deposit(amount){
+        this.balance+=amount;
+    }
+    withdraw(amount){
+        this.balance-=amount;
+    }
 }
 
 //prototype object
 
-BankApplication.prototype.deposit=function(amount){
-    this.balance+=amount
-}
-BankApplication.prototype.withdraw=function(amount){
-    this.balance-=amount;
-}
+
 
 
 const accounts=[]
