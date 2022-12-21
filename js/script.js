@@ -23,7 +23,12 @@ class BankApplication{
     }
 }
 
-//prototype object
+class saving_account extends BankApplication {
+    transactionLimit=5000;
+    constructor(customername,balance=0){
+        super(customername,balance)
+    }
+}
 
 
 
@@ -48,3 +53,8 @@ add.addEventListener("click",()=>{
    account.deposit(value);
    console.log(account)
 })
+
+const user2=new saving_account("Akshat",40000)
+
+user2.deposit(1200)
+console.log(user2)
